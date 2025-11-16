@@ -5,14 +5,14 @@ import (
 	"time"
 )
 
-func numeros() {
+func numbers() {
 	for i := 0; i < 10; i++ {
 		fmt.Printf("%d ", i)
 		time.Sleep(time.Millisecond * 200)
 	}
 }
 
-func letras() {
+func letters() {
 	for l := 'a'; l < 'j'; l++ {
 		fmt.Printf("%c ", l)
 		time.Sleep(time.Millisecond * 300)
@@ -20,8 +20,8 @@ func letras() {
 }
 
 func main() {
-	go numeros()
-	go letras()
+	go numbers()
+	go letters()
 	time.Sleep(5 * time.Second)
-	fmt.Printf("fim da execução!\n")
+	fmt.Printf("end of execution!\n")
 }
